@@ -1,0 +1,22 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	"image": "ghcr.io/astral-sh/uv:python3.13-bookworm",
+	"features": {
+		"ghcr.io/dhoeric/features/google-cloud-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"esbenp.prettier-vscode",
+				"svelte.svelte-vscode",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"charliermarsh.ruff",
+				"tamasfe.even-better-toml",
+			]
+		}
+	}
+}
