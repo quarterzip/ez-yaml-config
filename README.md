@@ -2,6 +2,8 @@ Install with `pip install ez-yaml-config`
 
 Then define some configuration files like so:
 ```python
+from config import Configuration, gsm_secret
+
 class ConfigBase(Configuration):
     CONFIG_FILE = "settings.yaml"
     CONFIG_FILE_PATH_ENV_VAR = "SETTINGS_PATH"
