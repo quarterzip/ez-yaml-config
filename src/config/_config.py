@@ -12,10 +12,10 @@ from pydantic import (
     create_model,
 )
 
-from ez_config._dicts import inflate_nested_dict, traverse_nested_dict_with_delimited_key
-from ez_config._errors import ConfigSetupError, ConfigurationError
-from ez_config._gsm import _fetch_secrets
-from ez_config._yaml import load_config
+from config._dicts import inflate_nested_dict, traverse_nested_dict_with_delimited_key
+from config._errors import ConfigSetupError, ConfigurationError
+from config._gsm import _fetch_secrets
+from config._yaml import load_config
 
 _logger = logging.getLogger(__name__)
 
@@ -95,8 +95,8 @@ class Configuration(BaseModel, ABC):
     def __init__(self, **kwargs):
         if self._warn_instantiation:
             _logger.warning(
-                f"Instantiated {type(self).__name__} directly. "
-                 "Use probably meant to use .get() classmethod to get the configured values"
+                f"Instantiated {type(self).__name__} directly, "
+                 "you probably want to use .get() classmethod to get the configured values instead"
             )
         super().__init__(**kwargs)
 

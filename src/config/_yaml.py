@@ -3,7 +3,7 @@ from functools import lru_cache
 
 import yaml
 
-from ez_config._errors import ConfigurationError
+from config._errors import ConfigurationError
 
 
 @lru_cache
