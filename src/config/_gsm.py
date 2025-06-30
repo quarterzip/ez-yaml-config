@@ -13,7 +13,7 @@ _logger = logging.getLogger(__name__)
 def get_gsm_client():
     return SecretManagerServiceClient()
 
-def get_secret_value(self, project: str, secret_name: str) -> str:
+def get_secret_value(project: str, secret_name: str) -> str:
     """
     Gets a secret from GSM, for the configured data project
     """
