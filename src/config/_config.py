@@ -118,10 +118,10 @@ class Configuration(BaseModel, ABC):
                 section.pop(reset_to_default, None)
 
         try:
-            cls._block_instantiation = False
+            cls._warn_instantiation = False
             return cls(**section)
         finally:
-            cls._block_instantiation = True
+            cls._warn_instantiation = True
 
     @classmethod
     def section_exists(cls) -> bool:
